@@ -1,0 +1,114 @@
+const cyStyle = [
+  {
+    selector: 'node',
+    style: {
+      'background-color': 'white',
+      'border-color': 'black',
+      'label': 'data(station_name)', // Cytoscape usa 'label' en lugar de 'content'
+      'width': 20,
+      'height': 20,
+      'min-zoomed-font-size': 16,
+      'color': '#fff',
+      'font-size': 16,
+      'z-index': 1
+    }
+  },
+  {
+    selector: 'node:selected, node.start, node.end',
+    style: {
+      'height': 60,
+      'width': 60,
+      'min-zoomed-font-size': 0,
+      'font-size': 48,
+      'border-color': '#000',
+      'border-width': 10,
+      'text-outline-color': '#000',
+      'text-outline-width': 10,
+      'z-index': 9999
+    }
+  },
+  {
+    selector: 'node.start, node.end',
+    style: {
+      'background-color': '#FC4C4C',
+      'color': '#FC4C4C'
+    }
+  },
+  {
+    selector: 'edge',
+    style: {
+      'min-zoomed-font-size': 36,
+      'font-size': 8,
+      'color': '#fff',
+      'line-color': 'green',
+      'width': 20,
+      'curve-style': 'haystack',
+      'haystack-radius': 0,
+      'opacity': 0.5
+    }
+  },
+  {
+    selector: 'edge[line_name]',
+    style: {
+      'label': 'data(line_name)'
+    }
+  },
+  {
+    selector: 'edge[company_type = 0]',
+    style: {
+      'line-color': '#00FFFF'
+    }
+  },
+  {
+    selector: 'edge[company_type = 1]',
+    style: {
+      'line-color': '#00FF33'
+    }
+  },
+  {
+    selector: 'edge[company_type = 2]',
+    style: {
+      'line-color': 'white'
+    }
+  },
+  {
+    selector: 'edge[company_type = 3]',
+    style: {
+      'line-color': 'red'
+    }
+  },
+  {
+    selector: 'edge[?is_walking]',
+    style: {
+      'line-color': '#555'
+    }
+  },
+  {
+    selector: 'core',
+    style: {
+      'active-bg-color': '#fff',
+      'active-bg-opacity': 0.333
+    }
+  },
+  {
+    selector: 'edge.not-path',
+    style: {
+      'opacity': 0.1,
+      'z-index': 0
+    }
+  },
+  {
+    selector: 'node.not-path',
+    style: {
+      'opacity': 0.333,
+      'z-index': 0
+    }
+  },
+  {
+    selector: 'edge.path',
+    style: {
+      'opacity': 0.666,
+      'z-index': 0
+    }
+  }
+];
